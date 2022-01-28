@@ -3,6 +3,12 @@
 
 #include "resRotTensors.h"
 
+// -------------------------------------------------------------------------------- //
+//  Test code with the example of use of drag and torque 
+//  model library for superellipsoidal particles, for the prediction
+//  of translation, rotation and resistance tensor coefficients
+// -------------------------------------------------------------------------------- //
+
 int main() {
 
 

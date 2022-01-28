@@ -10,8 +10,10 @@
 //
 //     Description
 //
-//          Drag and torque model library for superellipsoidal particles in the Stokes flow, based
-//          on the paper cited below. 
+//          Model library for the drag and the torque on superellipsoidal particles in 
+//          the Stokes flow. The library provides the translation, rotation and resistance 
+//          tensor coefficients that are implemented into the drag and torque equation (eqs. 13,14), 
+//          as described in the paper cited below. 
 //
 //          Particles are modelled by 4 geometric parameters: 
 //              lambda1, lambda2, e1, e2 (eqs. 11,12)
