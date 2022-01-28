@@ -113,6 +113,13 @@ double getKxx( double lam1, double lam2, double e1, double e2 )
 
 	double Kxx = 0.0;
 
+    if ( lam1 < 1.0 || lam1 > 11.0 || e1 < 0.2 || e1 > 1.8 || e2 < 0.2 || e2 > 1.8 )
+	{
+		std::cout << "!!! Warning parameter outside range. Ensure that the parameters are within: !!!\n";
+        std::cout << "!!! lambda1 = [1,11], lambda2 < lambda1, e1 = [0.2,1.8], e2 = [0.2,1.8]     !!!\n";
+        std::cout << "!!! Code will run, but it will return unverified results.                   !!!\n";
+	}
+
 	if ( lam2 > lam1 ) 
 	{
 		std::cout << "!!! Error, lam2 > lam1, this is not allowed, setting tensor to 0.0 !!!\n" ;
@@ -124,11 +131,6 @@ double getKxx( double lam1, double lam2, double e1, double e2 )
 	else if ( lam1 > 5.0 && lam1 <= 11.0 )
 	{
 		Kxx = eqQ( A2, lam1, lam2, e1, e2 );
-	}
-	else if ( lam1 > 11.0 )
-	{
-		Kxx = eqQ( A2, lam1, lam2, e1, e2 );
-		std::cout << "!!! Warning, outside range, max(lam1) = 11.0, code will run, but result will be garbage !!!\n";
 	}
 	else
 	{
@@ -188,6 +190,13 @@ double getKyy( double lam1, double lam2, double e1, double e2 )
 
 	double Kyy = 0.0;
 
+    if ( lam1 < 1.0 || lam1 > 11.0 || e1 < 0.2 || e1 > 1.8 || e2 < 0.2 || e2 > 1.8 )
+	{
+		std::cout << "!!! Warning parameter outside range. Ensure that the parameters are within: !!!\n";
+        std::cout << "!!! lambda1 = [1,11], lambda2 < lambda1, e1 = [0.2,1.8], e2 = [0.2,1.8]     !!!\n";
+        std::cout << "!!! Code will run, but it will return unverified results.                   !!!\n";
+	}
+
 	if ( lam2 > lam1 ) 
 	{
 		std::cout << "!!! Error, lam2 > lam1, this is not allowed, setting tensor to 0.0 !!!\n" ;
@@ -199,11 +208,6 @@ double getKyy( double lam1, double lam2, double e1, double e2 )
 	else if ( lam1 > 5.0 && lam1 <= 11.0 )
 	{
 		Kyy = eqQ( A2, lam1, lam2, e1, e2 );
-	}
-	else if ( lam1 > 11.0 )
-	{
-		Kyy = eqQ( A2, lam1, lam2, e1, e2 );
-		std::cout << "!!! Warning, outside range, max(lam1) = 11.0, code will run, but result will be garbage !!!\n";
 	}
 	else
 	{
@@ -263,6 +267,13 @@ double getKzz( double lam1, double lam2, double e1, double e2 )
 
 	double Kzz = 0.0;
 
+    if ( lam1 < 1.0 || lam1 > 11.0 || e1 < 0.2 || e1 > 1.8 || e2 < 0.2 || e2 > 1.8 )
+	{
+		std::cout << "!!! Warning parameter outside range. Ensure that the parameters are within: !!!\n";
+        std::cout << "!!! lambda1 = [1,11], lambda2 < lambda1, e1 = [0.2,1.8], e2 = [0.2,1.8]     !!!\n";
+        std::cout << "!!! Code will run, but it will return unverified results.                   !!!\n";
+	}
+
 	if ( lam2 > lam1 ) 
 	{
 		std::cout << "!!! Error, lam2 > lam1, this is not allowed, setting tensor to 0.0 !!!\n" ;
@@ -274,11 +285,6 @@ double getKzz( double lam1, double lam2, double e1, double e2 )
 	else if ( lam1 > 5.0 && lam1 <= 11.0 )
 	{
 		Kzz = eqQ( A2, lam1, lam2, e1, e2 );
-	}
-	else if ( lam1 > 11.0 )
-	{
-		Kzz = eqQ( A2, lam1, lam2, e1, e2 );
-		std::cout << "!!! Warning, outside range, max(lam1) = 11.0, code will run, but result will be garbage !!!\n";
 	}
 	else
 	{
@@ -338,6 +344,13 @@ double getOmegaxx( double lam1, double lam2, double e1, double e2 )
 
 	double Omegaxx = 0.0;
 
+    if ( lam1 < 1.0 || lam1 > 11.0 || e1 < 0.2 || e1 > 1.8 || e2 < 0.2 || e2 > 1.8 )
+	{
+		std::cout << "!!! Warning parameter outside range. Ensure that the parameters are within: !!!\n";
+        std::cout << "!!! lambda1 = [1,11], lambda2 < lambda1, e1 = [0.2,1.8], e2 = [0.2,1.8]     !!!\n";
+        std::cout << "!!! Code will run, but it will return unverified results.                   !!!\n";
+	}
+
 	if ( lam2 > lam1 ) 
 	{
 		std::cout << "!!! Error, lam2 > lam1, this is not allowed, setting tensor to 0.0 !!!\n" ;
@@ -349,11 +362,6 @@ double getOmegaxx( double lam1, double lam2, double e1, double e2 )
 	else if ( lam1 > 5.0 && lam1 <= 11.0 )
 	{
 		Omegaxx = eqQ( A2, lam1, lam2, e1, e2 );
-	}
-	else if ( lam1 > 11.0 )
-	{
-		Omegaxx = eqQ( A2, lam1, lam2, e1, e2 );
-		std::cout << "!!! Warning, outside range, max(lam1) = 11.0, code will run, but result will be garbage !!!\n";
 	}
 	else
 	{
@@ -413,6 +421,13 @@ double getOmegayy( double lam1, double lam2, double e1, double e2 )
 
 	double Omegayy = 0.0;
 
+    if ( lam1 < 1.0 || lam1 > 11.0 || e1 < 0.2 || e1 > 1.8 || e2 < 0.2 || e2 > 1.8 )
+	{
+		std::cout << "!!! Warning parameter outside range. Ensure that the parameters are within: !!!\n";
+        std::cout << "!!! lambda1 = [1,11], lambda2 < lambda1, e1 = [0.2,1.8], e2 = [0.2,1.8]     !!!\n";
+        std::cout << "!!! Code will run, but it will return unverified results.                   !!!\n";
+	}
+
 	if ( lam2 > lam1 ) 
 	{
 		std::cout << "!!! Error, lam2 > lam1, this is not allowed, setting tensor to 0.0 !!!\n" ;
@@ -424,11 +439,6 @@ double getOmegayy( double lam1, double lam2, double e1, double e2 )
 	else if ( lam1 > 5.0 && lam1 <= 11.0 )
 	{
 		Omegayy = eqQ( A2, lam1, lam2, e1, e2 );
-	}
-	else if ( lam1 > 11.0 )
-	{
-		Omegayy = eqQ( A2, lam1, lam2, e1, e2 );
-		std::cout << "!!! Warning, outside range, max(lam1) = 11.0, code will run, but result will be garbage !!!\n";
 	}
 	else
 	{
@@ -488,6 +498,13 @@ double getOmegazz( double lam1, double lam2, double e1, double e2 )
 
 	double Omegazz = 0.0;
 
+    if ( lam1 < 1.0 || lam1 > 11.0 || e1 < 0.2 || e1 > 1.8 || e2 < 0.2 || e2 > 1.8 )
+	{
+		std::cout << "!!! Warning parameter outside range. Ensure that the parameters are within: !!!\n";
+        std::cout << "!!! lambda1 = [1,11], lambda2 < lambda1, e1 = [0.2,1.8], e2 = [0.2,1.8]     !!!\n";
+        std::cout << "!!! Code will run, but it will return unverified results.                   !!!\n";
+	}
+
 	if ( lam2 > lam1 ) 
 	{
 		std::cout << "!!! Error, lam2 > lam1, this is not allowed, setting tensor to 0.0 !!!\n" ;
@@ -499,11 +516,6 @@ double getOmegazz( double lam1, double lam2, double e1, double e2 )
 	else if ( lam1 > 5.0 && lam1 <= 11.0 )
 	{
 		Omegazz = eqQ( A2, lam1, lam2, e1, e2 );
-	}
-	else if ( lam1 > 11.0 )
-	{
-		Omegazz = eqQ( A2, lam1, lam2, e1, e2 );
-		std::cout << "!!! Warning, outside range, max(lam1) = 11.0, code will run, but result will be garbage !!!\n";
 	}
 	else
 	{
@@ -563,6 +575,13 @@ double getPIxx( double lam1, double lam2, double e1, double e2 )
 
 	double PIxx = 0.0;
 
+    if ( lam1 < 1.0 || lam1 > 11.0 || e1 < 0.2 || e1 > 1.8 || e2 < 0.2 || e2 > 1.8 )
+	{
+		std::cout << "!!! Warning parameter outside range. Ensure that the parameters are within: !!!\n";
+        std::cout << "!!! lambda1 = [1,11], lambda2 < lambda1, e1 = [0.2,1.8], e2 = [0.2,1.8]     !!!\n";
+        std::cout << "!!! Code will run, but it will return unverified results.                   !!!\n";
+	}
+
 	if ( lam2 > lam1 ) 
 	{
 		std::cout << "!!! Error, lam2 > lam1, this is not allowed, setting tensor to 0.0 !!!\n" ;
@@ -574,11 +593,6 @@ double getPIxx( double lam1, double lam2, double e1, double e2 )
 	else if ( lam1 > 5.0 && lam1 <= 11.0 )
 	{
 		PIxx = eqQ( A2, lam1, lam2, e1, e2 );
-	}
-	else if ( lam1 > 11.0 )
-	{
-		PIxx = eqQ( A2, lam1, lam2, e1, e2 );
-		std::cout << "!!! Warning, outside range, max(lam1) = 11.0, code will run, but result will be garbage !!!\n";
 	}
 	else
 	{
@@ -638,6 +652,13 @@ double getPIyy( double lam1, double lam2, double e1, double e2 )
 
 	double PIyy = 0.0;
 
+    if ( lam1 < 1.0 || lam1 > 11.0 || e1 < 0.2 || e1 > 1.8 || e2 < 0.2 || e2 > 1.8 )
+	{
+		std::cout << "!!! Warning parameter outside range. Ensure that the parameters are within: !!!\n";
+        std::cout << "!!! lambda1 = [1,11], lambda2 < lambda1, e1 = [0.2,1.8], e2 = [0.2,1.8]     !!!\n";
+        std::cout << "!!! Code will run, but it will return unverified results.                   !!!\n";
+	}
+
 	if ( lam2 > lam1 ) 
 	{
 		std::cout << "!!! Error, lam2 > lam1, this is not allowed, setting tensor to 0.0 !!!\n" ;
@@ -649,11 +670,6 @@ double getPIyy( double lam1, double lam2, double e1, double e2 )
 	else if ( lam1 > 5.0 && lam1 <= 11.0 )
 	{
 		PIyy = eqQ( A2, lam1, lam2, e1, e2 );
-	}
-	else if ( lam1 > 11.0 )
-	{
-		PIyy = eqQ( A2, lam1, lam2, e1, e2 );
-		std::cout << "!!! Warning, outside range, max(lam1) = 11.0, code will run, but result will be garbage !!!\n";
 	}
 	else
 	{
@@ -713,6 +729,13 @@ double getPIzz( double lam1, double lam2, double e1, double e2 )
 
 	double PIzz = 0.0;
 
+    if ( lam1 < 1.0 || lam1 > 11.0 || e1 < 0.2 || e1 > 1.8 || e2 < 0.2 || e2 > 1.8 )
+	{
+		std::cout << "!!! Warning parameter outside range. Ensure that the parameters are within: !!!\n";
+        std::cout << "!!! lambda1 = [1,11], lambda2 < lambda1, e1 = [0.2,1.8], e2 = [0.2,1.8]     !!!\n";
+        std::cout << "!!! Code will run, but it will return unverified results.                   !!!\n";
+	}
+
 	if ( lam2 > lam1 ) 
 	{
 		std::cout << "!!! Error, lam2 > lam1, this is not allowed, setting tensor to 0.0 !!!\n" ;
@@ -724,11 +747,6 @@ double getPIzz( double lam1, double lam2, double e1, double e2 )
 	else if ( lam1 > 5.0 && lam1 <= 11.0 )
 	{
 		PIzz = eqQ( A2, lam1, lam2, e1, e2 );
-	}
-	else if ( lam1 > 11.0 )
-	{
-		PIzz = eqQ( A2, lam1, lam2, e1, e2 );
-		std::cout << "!!! Warning, outside range, max(lam1) = 11.0, code will run, but result will be garbage !!!\n";
 	}
 	else
 	{
