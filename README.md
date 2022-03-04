@@ -2,4 +2,7 @@
 A model to estimate flow induced force and torque on a superellipsoid shaped particle in creeping flow conditions.
 
 Details of the model are described in the following paper:
-* Mitja Štrakl, Matjaž Hriberšek, Jana Wedel, Paul Sterinamnn, Jure Ravnik: A model for translation and rotation resistance tensors for superellipsoidal particles in Stokes flow, to appear in 2022/2023
+
+* Štrakl, M., Hriberšek, M., Wedel, J., Steinmann, P., Ravnik, J. (2022) A Model for Translation and Rotation Resistance Tensors for Superellipsoidal Particles in Stokes Flow. J. Mar. Sci. Eng. 2022, 10, 369. doi:[10.3390/jmse10030369](https://www.mdpi.com/2077-1312/10/3/369)
+
+
